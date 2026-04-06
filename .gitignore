@@ -50,7 +50,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-
+nome.txt
+sobrenome.txt
 # Translations
 *.mo
 *.pot
@@ -205,6 +206,3 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-
-# Arquivo
-.data/
