@@ -19,14 +19,17 @@ def main():
                         nomes = VerificarArquivo('nome')
                         if nome in nomes:
                             print("Nome Repetido")
+                            input()
                         else:
                             arquivo.write(f"{nome}\n")
                             print("Nome Cadastrado")
+                            input()
     
                 except FileNotFoundError:
-                    with open('data/nome', 'w') as arquivo:
+                    with open('data/nome.txt', 'w') as arquivo:
                         arquivo.write(nome)
                         print("Nome Cadastrado")
+                        input()
 
             case 2:
                 sobrenome = InserirNome('sobrenome')
@@ -35,6 +38,7 @@ def main():
                         sobrenomes = VerificarArquivo('sobrenome')
                         if sobrenome in sobrenomes:
                             print("Sobrenome Repetido")
+                            input()
                         else:
                             arquivo.write(f"{sobrenome}\n")
     
@@ -42,6 +46,7 @@ def main():
                     with open('data/sobrenome', 'w') as arquivo:
                         arquivo.write(sobrenome)
                         print("Sobrenome Cadastrado")
+                        input()
 
             case 3:
                 try:
@@ -53,11 +58,13 @@ def main():
                     nome = input("Digite o nome: ")
                     nome = nome.capitalize()
                     DeletarNome(nome, 'nome')
+                    input()
 
                 elif delete == 2:
                     sobrenome = input("Digite o sobrenome: ")
                     sobrenome = sobrenome.capitalize()
                     DeletarNome(sobrenome, 'sobrenome')
+                    input()
                 else:
                     print("Inválido")
 
@@ -66,6 +73,7 @@ def main():
                 sobrenomes = VerificarArquivo('sobrenome')
                 nomeGerado = GerarNomeAleat(nomes,sobrenomes)
                 print(nomeGerado)
+                input()
 
             case 5:
                 rodar = False

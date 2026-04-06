@@ -35,8 +35,8 @@ def DeletarNome(nome,tipo):
         print(f"{tipo.capitalize()} não encontrado")
 
 def GerarNomeAleat(nomes,sobrenomes):
-    nome = nomes[randint(1,len(nomes)-1)]
-    sobrenome = sobrenomes[randint(1,len(sobrenomes)-1)]
+    nome = nomes[randint(0,len(nomes)-1)]
+    sobrenome = sobrenomes[randint(0,len(sobrenomes)-1)]
     return f'{nome} {sobrenome}'
 
 def Clear():
